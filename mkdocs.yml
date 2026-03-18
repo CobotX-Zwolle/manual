@@ -1,0 +1,35 @@
+site_name: CobotX General Manual
+site_description: General Manual for CobotX Software
+site_url: https://cobotx-zwolle.github.io/manual
+repo_url: https://github.com/cobotx-zwolle/manual
+repo_name: cobotx-zwolle/manual
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.instant
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Style Guide:
+    - C++: style_guide/cpp.md
+    - Auto format: style_guide/auto_format.md
+    #- How-To:
+    #  - how-to/index.md
+    #- Concepts:
+    #  - concepts/index.md
+    #- Reference:
+    #  - reference/index.md
+
+extra_css:
+  - extra.css

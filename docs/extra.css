@@ -1,0 +1,28 @@
+
+.md-grid {
+    max-width: 1440px !important;   /* default is ~1440px — reduce as needed */
+}
+
+/* Make left sidebar (nav) narrower */
+.md-sidebar--primary {
+    width: 250px;               /* Adjust width as you wish */
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+/* Right Table of Contents */
+.md-sidebar--secondary {
+    width: 150px;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+.md-sidebar--primary .md-nav {
+    width: 150px;
+}
+
+.md-content {
+    margin-left: 10px;         /* Keep main content aligned */
+}
