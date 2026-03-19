@@ -24,6 +24,8 @@ nav:
   - Style Guide:
     - C++: style_guide/cpp.md
     - Auto format: style_guide/auto_format.md
+  - Version:
+    - Library development: library/library.md
     #- How-To:
     #  - how-to/index.md
     #- Concepts:
