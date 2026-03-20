@@ -50,7 +50,7 @@ cmake --build . --target package
 
 # Release 
 
-When the dev branch has been approaved a release can be generated. 
+When the dev branch has been approved a release can be generated. 
 Generate a tag using 
 ```
 git tag -a v1.2.3
