@@ -9,3 +9,5 @@ DerivePointerAlignment: false
 PointerAlignment: Left
 ReferenceAlignment: Left
 ```
+
+* TODO: Add instructions for VSCode 

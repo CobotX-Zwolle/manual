@@ -31,4 +31,56 @@ This branch will require a Pull Request to the main branch, once the dev/vx.y.z 
 
 TODO: Instructions on release notes
 
+# CMake 
+
+Cmake part for possibilty to create .deb file
+```
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "CobotX")
+include(CPack)
+set(CPACK_PACKAGE_NAME ${CMAKE_PROJECT_NAME})
+set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+
+```
+
+To create the .deb file:
+```
+cmake --build . --target package
+```
+
+# Release 
+
+When the dev branch has been approaved a release can be generated. 
+Generate a tag using 
+```
+git tag -a v1.2.3
+```
+and push the tag 
+```
+git push origin v1.2.3
+```
+
+On the github page of the repository create a new release, using the just created tag, write the release notes and upload the created .deb file. 
+
+# Dependency 
+
+If your library depends on another library you have to update the Config.cmake.in file located in the cmake directory. 
+```
+include(CMakeFindDependencyMacro)
+find_dependency(library_name x.y.z REQUIRED)
+```
+The library_name and version (x.y.z) has to be the same as the find_package variables
+
+# Library manager 
+
+The [library_manager](https://github.com/CobotX-Zwolle/library_manager) can be used to download all .deb files from the repositories, 
+its important to keep this file up-to-date with the latest versions. 
+Update the libraries.json file with either the new repository name and/or add the new version to it. 
+Download the .deb files
+```
+python3 update_libraries.py
+```
+
+* TODO: this requires ```gh``` to be installed and configured (needs some instructions).
+* TODO: see if this can be automated to parse all available tags and download the .deb files from them without having to add the versions manually.
 
