@@ -28,6 +28,8 @@ nav:
     - Library development: library/library.md
   - Git:
     - Git usage: git/git.md
+  - Debug:
+    - Core dump: debug/core_dump.md
     #- How-To:
     #  - how-to/index.md
     #- Concepts:
