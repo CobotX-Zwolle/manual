@@ -146,7 +146,7 @@ State state_{State::INIT};
    if (value2) {
        
         if (value3) {
-          // do something here
+          // Do something here
         }
    }
  }
@@ -161,7 +161,7 @@ State state_{State::INIT};
  }
 
  if (value3) {
-   // do something here
+   // Do something here
  }
 ```
 
@@ -199,10 +199,10 @@ State state_{State::INIT};
 
 ```c++
 int value = 1;
-// empty white line
+// Empty white line
 if (value == 1) {
 }
-// empty white line
+// Empty white line
 return;
 ```
 
@@ -228,5 +228,22 @@ if (value == true) {
 ```c++
 if (value == true) 
   std::cout << "value was true\n";
-  std::cout << "extra print statement\n"; // this is now not part of the if statement
+  std::cout << "extra print statement\n"; // This is now not part of the if statement
+```
+
+# Comments
+
+* KISS 
+* Specify units e.g. mm, degrees, (milli)seconds. 
+* Why something is done, especially for certain unclear use-cases. 
+
+```c++
+const float ur_coordinate_x = 1; // meter
+
+float distanceUrToDoosan(const float ur_coordinate) {
+    // UR uses meters, Doosan uses mm
+    return doosan_coordinate = ur_coordinate / 1000; // mm
+}
+
+const float doosan_coordinate_x = distanceUrToDoosan(ur_coordinate_x);
 ```
