@@ -100,6 +100,59 @@ Feat: Print hello world 5 times
 
 This way the commit history should only contain valid information and not temporary commits 
 
+Before merging your branch you might want to squash some commits, for example commits that have no valid information should be squashed
+
+rebase the last 3 commits
+git rebase -i HEAD~3 
+
+```
+pick 402ca26 Feat: Hello world
+pick c0a0a3a WiP
+pick 3edcde3 Feat: Print hello world 5 times
+```
+
+change ```pick``` to ```squash``` or ```s``` of the commits you want to squash
+
+```
+pick 402ca26 Feat: Hello world
+s c0a0a3a WiP
+s 3edcde3 Feat: Print hello world 5 times
+```
+
+save the file. <br>
+Commit message:
+
+```
+# This is a combination of 3 commits.
+# This is the 1st commit message:
+
+Feat: Hello world
+
+# This is the commit message #2:
+
+WiP
+
+# This is the commit message #3:
+
+Feat: Print hello world 5 times
+
+```
+
+Remove commit message 2 because it does not contain any valid information
+
+```
+# This is a combination of 3 commits.
+# This is the 1st commit message:
+
+Feat: Hello world
+
+# This is the commit message #3:
+
+Feat: Print hello world 5 times
+```
+
+This way the commit history should only contain valid information and not temporary commits 
+
 # Branch naming 
 When creating a new branch use a prefix for temporary development (these branches should be deleted once the work has been released).
 <br>
@@ -112,7 +165,7 @@ Prefixes: <br>
 
 
 # Clickup 
-## Bug reports 
+### Bug reports 
 Reporting bugs should happen via Clickup, not directly via github (Clickup can create issues). 
 Keeping the data in Clickup allows for a better overview of that status of bugs. 
 
@@ -134,7 +187,7 @@ Steps: <br>
 * Environment: Fill in which OS (Ubunt 20/24), Repository name and which branch 
 * Steps to reproduce: If available describe how to recreate the bug, e.g. "If the X button was pressed while Y was happening, Z would crash".
 * Expected outcome: If possible describe what should happen if the bug would be fixed, e.g. "Z would no longer crash, but an error message should popup on the screen"
-* Tags: add possible tags that belong to this bug (no need to add the tag 'bug' because it's a list of only bugs), e.g. 'ui', 'yaml' 
+* Tags: Add possible tags that belong to this bug (no need to add the tag 'bug' because it's a list of only bugs), e.g. 'ui', 'yaml' 
 * Description: Write who reported the bug/issue, e.g. The operator from company ABC reported issue that when he pressed the X button, Z crashed.  
 Write in details the information that describes the problem, possible suggestions and/or other information that you think is important to document. 
 Does this happen often? Do you think this is related to something else? Was there a recent software update or other changes to the machine?
