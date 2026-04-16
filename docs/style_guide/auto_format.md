@@ -11,16 +11,25 @@ ReferenceAlignment: Left
 ```
 
 ### Auto format VSCode 
-VScode has some issues due to an overriding default in the style reference
+Similarily too the above format settings but with:
 
-* Insall the extension [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd)
+```
+BasedOnStyleBy: Google 
+DerivePointerAlignment: false 
+PointerAlignment: Right
+ReferenceAlignment: Right
+```
+
 * in VSCode setting:
-    * Editor: Defaul Formatter -> clangD
-    *  Clangd: Path -> $HOME/.vscode-server/data/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/21.1.8/clangd_21.1.8/bin/clangd
-    *  C_Cpp: Clang_format_style -> Google
+    * Editor: Defaul Formatter -> C/C++
+    *  C_Cpp: Clang_format_style -> file
 
 ### Pointer and reference alignment
 
 Should be:
 
 > function_name(type *var1, type &var2) {}
+
+Test with:
+
+> clang-format -i file_name
