@@ -104,6 +104,10 @@ const float offset = 0.1f; // Make sure offset value cannot change
 offset = 0.2f; // This will result in compile error
 ```
 
+# Global variables
+* Global variables should be, with a few exceptions, constants and CAPITAL_SNAKE_CASE.
+    *  Exception being the signal interrupt handler used in the main.cpp
+
 # Enums
 * Enums should be PascalCase
 * Enum values should be CAPITAL_SNAKE_CASE
