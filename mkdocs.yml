@@ -30,6 +30,9 @@ nav:
     - Git usage: git/git.md
   - Debug:
     - Core dump: debug/core_dump.md
+  - Documentation:
+    - Architecture:
+      - Pattern Generator: documentation/architecture/pattern_generator_convertor.md
     #- How-To:
     #  - how-to/index.md
     #- Concepts:
