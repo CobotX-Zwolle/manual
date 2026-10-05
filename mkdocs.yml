@@ -28,6 +28,10 @@ nav:
     - Library development: library/library.md
   - Git:
     - Git usage: git/git.md
+    - Commit style: git/commit_message.md
+    - Branch naming: git/branch_naming.md
+    - PR Merge strategy: git/merge_puill_requests.md
+    - Clickup: git/clickup.md
   - Debug:
     - Core dump: debug/core_dump.md
   - Documentation:
